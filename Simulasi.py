@@ -102,7 +102,7 @@ if __name__ == "__main__":
     number_of_trials = 10000
     number_of_doors = 3
     number_of_prizes = 1
-    number_of_limits = 2  # Doors will be removed until there are only {} doors
+    number_of_limits = 2  # Doors will be removed until there are only {} doors remaining
     is_verbose = False
 
     # s = Simulation()  # default arguments value
