@@ -34,22 +34,29 @@ class MontyHall:
 
 
 class Simulation:
-	def start(self, doors=3, switch=False, trials=10000):
+	def __init__(self, doors=3, trials=10**5):
+		self.doors = doors
+		self.trials = trials
+		
+	def start(self, switch=False):
 		wins = 0
-		for x in range(trials):
-			m = MontyHall(doors)
+		for x in range(self.trials):
+			m = MontyHall(self.doors)
 			if(m.start(switch)):
 				wins += 1
-		return self._print(switch, wins, trials)
+		return self._print(switch, wins)
 		
-	def _print(self, switch, wins, trials):
-		out_format = "{:15s}: {:3.2f}℅ with {} wins"
+	def _print(self, switch, wins):
+		out_format = "{:15s}: {:3.2f}℅ with {} wins of {} trials"
 		
 		ss = "Switching" if(switch) else "Not Switching"
-		perc = wins/trials*100
-		return out_format.format(ss, perc, wins)
+		perc = wins/self.trials*100
+		return out_format.format(ss, perc, wins, self.trials)
 		
-		
-s = Simulation()
-print(s.start(doors=100, switch=True))
-print(s.start(doors=100, switch=False))
+
+if __name__ == "__main__":
+	d = 5
+	t = 10**5
+	s = Simulation(doors=d, trials=t)
+	print(s.start(switch=True))
+	print(s.start(switch=False))
