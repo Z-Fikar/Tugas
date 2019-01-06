@@ -99,15 +99,14 @@ class Simulation:
 
 
 if __name__ == "__main__":
-    number_of_trials = 10000
+    number_of_trials = 3
     number_of_doors = 3
     number_of_prizes = 1
-    number_of_limits = 2
-    is_verbose = False
+    number_of_limits = 2  # Pintu akan dibuka sampai {sekian} pintu
+    is_verbose = True
 
     # s = Simulation()  # default arguments value
     s = Simulation(doors=number_of_doors, trials=number_of_trials,
                    prizes=number_of_prizes, limit=number_of_limits)
-    res = [s.start(switch=True, verbose=is_verbose),
-           s.start(switch=False, verbose=is_verbose)]
-    print("\n".join(res))
+    print(s.start(switch=True, verbose=is_verbose))
+    print(s.start(switch=False, verbose=is_verbose))
