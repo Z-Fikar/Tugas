@@ -2,6 +2,7 @@
 
 import random as r
 
+
 class MontyHall:
     def __init__(self, doors=3, prizes=1, limit=2):
         self.doors = [x for x in range(doors)]
