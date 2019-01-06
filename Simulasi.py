@@ -92,7 +92,7 @@ class Simulation:
         out_format = " {:15s}: {:3.2f}℅ with {} wins of {} trials"
 
         ss = "Switching" if(switch) else "Not Switching"
-        perc = wins / self.trials * 100
+        perc = wins * 100. / self.trials
         out = out_format.format(ss, perc, wins, self.trials)
         line = "="*(len(out)+1)
         return "\n".join([line, out, line, "\n"])
