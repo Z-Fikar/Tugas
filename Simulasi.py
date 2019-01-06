@@ -100,7 +100,7 @@ class Simulation:
 
 if __name__ == "__main__":
     number_of_trials = 10000
-    number_of_doors = 5
+    number_of_doors = 3
     number_of_prizes = 1
     number_of_limits = 2
     is_verbose = False
