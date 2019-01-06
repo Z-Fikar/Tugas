@@ -55,8 +55,8 @@ class Simulation:
 		
 
 if __name__ == "__main__":
-	d = 5
-	t = 10**5
+	d = int(input())
+	t = int(input())
 	s = Simulation(doors=d, trials=t)
 	print(s.start(switch=True))
 	print(s.start(switch=False))
