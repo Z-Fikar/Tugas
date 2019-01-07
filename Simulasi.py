@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 import random as r
 
 
@@ -80,22 +81,22 @@ class Simulation:
         self.prizes = prizes
         self.limit = limit
 
-    def start(self, switch=False, verbose=False):
+    def start(self, switch=False, verbose=False, info=True):
         wins = 0
         for x in range(self.trials):
             m = MontyHall(self.doors, self.prizes, self.limit)
             if(m.start(switch, verbose)):
                 wins += 1
-        return self._print(switch, wins)
+        return self._print(switch, wins, info)
 
-    def _print(self, switch, wins):
+    def _print(self, switch, wins, info=True):
         out_format = " {:15s}: {:3.2f}℅ with {} wins of {} trials"
 
         ss = "Switching" if(switch) else "Not Switching"
         perc = wins * 100. / self.trials
         out = out_format.format(ss, perc, wins, self.trials)
         line = "="*(len(out)+1)
-        return "\n".join([line, out, line, "\n"])
+        return "\n".join([line, out, line, "\n"]) if info else perc
 
 
 if __name__ == "__main__":
