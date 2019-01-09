@@ -2,24 +2,26 @@
 
 - [Pengantar Pengolahan Citra](#pengantar-pengolahan-citra)
   - [Penggunaan](#penggunaan)
-  - [Main](#main)
-    - [ImageMenu](#imagemenu)
-    - [SmoothMenu](#smoothmenu)
-      - [Mean](#mean)
-      - [LowPass](#lowpass)
-      - [Median](#median)
+  - [Main.m](#mainm)
+    - [ImageMenu.m](#imagemenum)
+    - [SmoothMenu.m](#smoothmenum)
+      - [Mean.m](#meanm)
+      - [LowPass.m](#lowpassm)
+      - [Median.m](#medianm)
 
 ## Penggunaan
+
+Pada `Command Window` MATLAB, ketikkan perintah berikut.
 
 ```
     >> Main
 ```
 
-## Main
+## Main.m
 
-berisi perintah untuk memanggil `ImageMenu` dan dilanjutkan dengan `SmoothMenu`.
+berisi perintah untuk memanggil `ImageMenu.m` dan dilanjutkan dengan `SmoothMenu.m`.
 
-### ImageMenu
+### ImageMenu.m
 
 berisi perintah untuk menampilkan menu untuk memuat gambar `img`. Terdapat dua pilihan, mengunduh gambar dari alamat url atau menggunakan gambar yang sudah ada.
 
@@ -33,9 +35,9 @@ berisi perintah untuk menampilkan menu untuk memuat gambar `img`. Terdapat dua p
 
 ```
 
-### SmoothMenu
+### SmoothMenu.m
 
-menu dipanggil setelah gambar `img` diisi. Berisi menu yang terdiri dari beberapa filter untuk proses pelembutan gambar (_Smoothing_), diantaranya: _Low Pass_, _Mean_, dan _Median_.
+perintah ini sebaiknya dilakukan ketika variabel gambar `img` diisi dan terlihat pada bagian `WORKSPACE` di MATLAB. Berisi menu yang terdiri dari beberapa filter untuk proses pelembutan gambar (_Smoothing_), diantaranya: _Low Pass_, _Mean_, dan _Median_.
 
 ```
     ==== Smoothing Filter ====
@@ -48,14 +50,14 @@ menu dipanggil setelah gambar `img` diisi. Berisi menu yang terdiri dari beberap
 
 ```
 
-#### Mean
+#### Mean.m
 
 di awal dijalankan, program akan meminta pengguna untuk memasukkan ukuran dari matriks filter `Z(i x j)`.
 
-#### LowPass
+#### LowPass.m
 
 di awal dijalankan, program akan meminta pengguna untuk memasukkan matriks filter `Z`. Syarat filter Low Pass adalah jumlah dari semua anggota elemen `Z` harus sama dengan 1, sehingga jika tidak memenuhi syarat program tidak akan diteruskan.
 
-#### Median
+#### Median.m
 
 di awal dijalankan, program akan meminta pengguna untuk memasukkan ukuran dari matriks filter `Z(i x j)`.
