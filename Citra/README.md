@@ -11,10 +11,32 @@
 
 ## Penggunaan
 
-Pada `Command Window` MATLAB, ketikkan perintah berikut.
+Untuk penggunaan pertama kali, ketikkan perintah berikut pada `Command Window` MATLAB.
 
 ```
     >> Main
+```
+
+Untuk memuat dan/atau mengganti gambar `img`, ketikkan perintah berikut
+
+```
+    >> ImageMenu
+```
+
+Untuk menerapkan filter pelembutan pada gambar `img`, ketikkan perintah berikut untuk menampilkan daftar filter yang tersedia.
+
+```
+    >> SmoothMenu
+```
+
+atau langsung ketikkan nama perintah dari masing-masing filter jika `img` sudah terisi.
+
+```
+    >> LowPass
+                atau
+    >> Mean
+                atau
+    >> Median
 ```
 
 ## Main.m
@@ -29,7 +51,7 @@ berisi perintah untuk menampilkan menu untuk memuat gambar `img`. Terdapat dua p
     ==== Smoothing Program ====
     1. Save image from url
     2. Read image from folder
-    0. Exit
+    3. Exit
     ==========================
     Command:
 
