@@ -28,6 +28,7 @@ function f = SaveFromUrl()
     splitted = split(url, "/");
     img_name = string(splitted(length(splitted)));
     imwrite(uint8(img), dir+img_name);
+    imshow(img);
 end
 
 function f = ReadFromFolder()
@@ -35,4 +36,5 @@ function f = ReadFromFolder()
     img_name = input("Image's name: ", 's');
     
     img = imread(dir+img_name);
+    imshow(img);
 end
