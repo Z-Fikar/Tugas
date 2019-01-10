@@ -32,11 +32,11 @@ function f = MeanFilter(a,b,rgb)
     global img Z i j c;
     dx = a - c(1);
     dy = b - c(2);
-    total = double(0);
+    total = int32(0);
     
     for x = 1:i
         for y = 1:j
-            total = total + double(img(x+dx, y+dy, rgb));
+            total = total + int32(img(x+dx, y+dy, rgb));
         end
     end
     
