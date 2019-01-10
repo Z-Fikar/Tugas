@@ -2,7 +2,7 @@ global img img_name dir;
 dir = "Images/";
 Main();
 
-function f = Main()
+function Main()
     disp("==== Smoothing Program ====");
     disp("1. Save image from url");
     disp("2. Read image from folder");
@@ -21,7 +21,7 @@ function f = Main()
     end
 end
     
-function f = SaveFromUrl()
+function SaveFromUrl()
     global img img_name dir;
     url = input("URL to image: ", 's');
     img = imread(url);
@@ -31,7 +31,7 @@ function f = SaveFromUrl()
     imshow(img);
 end
 
-function f = ReadFromFolder()
+function ReadFromFolder()
     global img img_name dir;
     img_name = input("Image's name: ", 's');
     

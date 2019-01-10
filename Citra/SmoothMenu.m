@@ -2,7 +2,7 @@ global img;
 
 Main();
 
-function f = Main()
+function Main()
     global img
     [x,y,z] = size(img);
     if(x>1 & y>1 & z>=1)
